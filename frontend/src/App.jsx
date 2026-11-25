@@ -61,7 +61,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Sidebar from "./components/Sidebar";
 import SectionView from "./components/SectionView";
-import Login from "./components/Login";
+import Auth from "./components/Auth";
 
 // const API = "http://localhost:5000/api/sections";
 const API = "/api/sections";
