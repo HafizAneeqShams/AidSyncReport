@@ -64,7 +64,7 @@ import SectionView from "./components/SectionView";
 import Login from "./components/Login";
 
 // const API = "http://localhost:5000/api/sections";
-const API = "https://aidsyncreport.vercel.app";
+const API = "/api/sections";
 
 
 export default function App() {
