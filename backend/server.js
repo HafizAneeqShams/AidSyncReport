@@ -16,3 +16,8 @@ mongoose.connect(process.env.MONGO_URI)
     app.listen(process.env.PORT, () => console.log(`Server on http://localhost:${process.env.PORT}`));
   })
   .catch(err => console.error(err));
+
+  if (process.env.NODE_ENV !== 'production') {
+  app.listen(process.env.PORT || 5000, () => console.log('Server running'));
+}
+module.exports = app;
