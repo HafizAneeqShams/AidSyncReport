@@ -1,0 +1,272 @@
+:root {
+  --dark-blue: #274245;      /* Aapka purana Dark Blue */
+  --dark-blue-darker: #1d3235; /* Sidebar ke liye thoda gehra */
+  --yellow: #DFD6AE;         /* Aapka Yellow Sapling */
+  --yellow-soft: #a8a07a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", sans-serif; }
+
+body { background: var(--dark-blue); color: var(--yellow); }
+
+.app { display: flex; min-height: 100vh; }
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: var(--dark-blue-darker);
+  padding: 20px 15px;
+  border-right: 2px solid var(--yellow);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.brand {
+  text-align: center;
+  border-bottom: 2px solid var(--yellow);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.brand h1 { color: var(--yellow); font-size: 24px; margin: 0; }
+.brand h1 span { color: var(--yellow-soft); }
+.brand p { color: var(--yellow); opacity: 0.7; font-size: 12px; margin-top: 5px; text-transform: uppercase; }
+
+/* NAYA CODE: Buttons ko vertical rakhne ke liye */
+.nav-links {
+  display: flex;
+  flex-direction: column; /* Ek ke neeche ek layega */
+  gap: 10px;
+  width: 100%;
+}
+
+.side-btn {
+  width: 100%; /* Button ko pura cover karne ke liye */
+  background: transparent;
+  border: 1px solid var(--yellow);
+  color: var(--yellow);
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.side-btn:hover, .side-btn.active {
+  background: var(--yellow);
+  color: var(--dark-blue);
+  font-weight: bold;
+}
+
+/* Main Content (Card style) */
+.content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.main-card {
+  background: var(--dark-blue-darker);
+  width: 100%;
+  max-width: 900px;
+  border: 1px solid var(--yellow);
+  border-radius: 12px;
+  padding: 30px;
+  height: fit-content;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(223, 214, 174, 0.3);
+  padding-bottom: 15px;
+}
+
+.page-title { color: var(--yellow); font-size: 24px; margin-bottom: 5px; }
+.page-subtitle { color: var(--yellow); opacity: 0.6; font-size: 14px; }
+
+.top-right-badge {
+  background: var(--dark-blue);
+  border: 1px solid var(--yellow);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: var(--yellow);
+}
+
+.info-box {
+  background: var(--dark-blue);
+  border: 1px solid var(--yellow-soft);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 25px;
+  color: var(--yellow);
+  font-size: 14px;
+}
+
+.content-display {
+  line-height: 1.8;
+  color: var(--yellow);
+  white-space: pre-wrap;
+  font-size: 16px;
+  min-height: 200px;
+}
+
+
+/* Content text styling */
+.content-display {
+  line-height: 1.8;
+  color: var(--yellow);
+  white-space: pre-wrap;
+  font-size: 16px;
+  min-height: 200px;
+}
+
+/* Sirf size bada aur bold, koi underline nahi */
+.content-display b {
+  font-size: 24px; /* Size bada kar diya */
+  display: block;  /* Taake apni alag line mein aaye */
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: var(--yellow);
+  font-weight: bold;
+}
+
+/* Pehli heading ke upar se extra gap hatane ke liye */
+.content-display b:first-child {
+  margin-top: 0;
+}
+
+
+/* ============================================
+   LOGIN PAGE STYLES
+   ============================================ */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--dark-blue);
+}
+
+.login-box {
+  background-color: var(--dark-blue-darker);
+  border: 1px solid var(--yellow);
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.login-box h1 {
+  color: var(--yellow);
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 26px;
+}
+
+.login-box h1 span {
+  color: var(--yellow-soft);
+}
+
+.login-box p {
+  color: var(--yellow);
+  opacity: 0.7;
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.login-error {
+  background-color: rgba(217, 83, 79, 0.2);
+  color: #ff8b88;
+  border: 1px solid #d9534f;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  color: var(--yellow);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--dark-blue);
+  border: 1px solid var(--yellow-soft);
+  border-radius: 6px;
+  color: var(--yellow);
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.input-group input:focus {
+  border-color: var(--yellow);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--yellow);
+  color: var(--dark-blue);
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+.login-btn:hover {
+  background-color: var(--yellow-soft);
+}
+
+/* ============================================
+   LOGOUT BUTTON STYLES (Same as Sidebar Buttons)
+   ============================================ */
+
+.logout-container {
+  margin-top: auto; /* Button ko sidebar ke bilkul end mein push karne ke liye */
+  padding-top: 20px;
+  border-top: 1px solid rgba(223, 214, 174, 0.2); /* Halki si line taake baqi buttons se separate lage */
+}
+
+.logout-btn {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--yellow);
+  color: var(--yellow);
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+  text-align: center; /* Text center mein rakhne ke liye */
+}
+
+.logout-btn:hover {
+  background: var(--yellow);
+  color: var(--dark-blue);
+  font-weight: bold;
+}
