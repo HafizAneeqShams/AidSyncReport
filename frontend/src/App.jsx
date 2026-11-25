@@ -63,7 +63,9 @@ import Sidebar from "./components/Sidebar";
 import SectionView from "./components/SectionView";
 import Login from "./components/Login";
 
-const API = "http://localhost:5000/api/sections";
+// const API = "http://localhost:5000/api/sections";
+const API = "https://aidsync-backend.vercel.app/api/sections";
+
 
 export default function App() {
   // Check karein ke browser mein pehle se login hai ya nahi
